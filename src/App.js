@@ -4,8 +4,7 @@ import styled from "styled-components";
 import MainContainer from "./components/mainContainer/MainContainer";
 import LeftSide from "./components/leftSide/LeftSide";
 import RighttSide from "./components/rightSide/RightSide";
-
-
+import { smallDivices } from "./variables";
 
 const GlobalSyles = createGlobalStyle`
   body{
@@ -14,20 +13,20 @@ const GlobalSyles = createGlobalStyle`
     justify-content: center;
     align-items: center;
     height: 100vh;
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
-    *{
-      font-family: 'Roboto', sans-serif;
-    }
+    font-family: 'Exo 2', sans-serif;
   }
 `;
 
 const Line = styled.div`
-  margin: 42px 0;
-  width: 1px;
-  height: 385px;
+  margin-top: 35px;
+  width: 0.6px;
+  height: 394px;
   background-color: white;
-`
-
+  padding: 0;
+  @media (max-width: ${smallDivices}) {
+    display: none;
+  }
+`;
 
 function App() {
   return (
@@ -35,10 +34,9 @@ function App() {
       <GlobalSyles />
       <MainContainer>
         <LeftSide />
-        <Line/>
-       <RighttSide />
+        <Line />
+        <RighttSide />
       </MainContainer>
-
     </>
   );
 }
