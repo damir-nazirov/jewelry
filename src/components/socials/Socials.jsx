@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import instagram from "../../images/socials/instagram.svg";
-import wa from "../../images/socials/WA.svg";
+import whatsApp from "../../images/socials/whatsApp.svg";
 import telegram from "../../images/socials/telegram.svg";
-import linkedin from "../../images/socials/linkedin.svg";
-import facebook from "../../images/socials/facebook.svg";
 import viber from "../../images/socials/viber.svg";
-import { smallDivices } from "../../variables";
+import facebook from "../../images/socials/facebook.svg";
+import linkedin from "../../images/socials/linkedin.svg";
+
+import { desktopMinWidth } from "../../variables";
+
+const socials = [instagram, whatsApp, telegram, viber, facebook, linkedin];
 
 const CocialsList = styled.ul`
   width: 100%;
@@ -22,44 +25,27 @@ const SocialLink = styled.a`
 
 const SocialImage = styled.img`
   width: 20px;
-  @media (max-width: ${smallDivices}) {
+  @media (max-width: ${desktopMinWidth}) {
     width: 27.33px;
   }
 `;
 
+const SocialListItem = ({ src }) => {
+  return (
+    <li>
+      <SocialLink>
+        <SocialImage src={src} />
+      </SocialLink>
+    </li>
+  );
+};
+
 const Socials = () => {
   return (
     <CocialsList>
-      <li>
-        <SocialLink>
-          <SocialImage src={instagram} />
-        </SocialLink>
-      </li>
-      <li>
-        <SocialLink>
-          <SocialImage src={wa} />
-        </SocialLink>
-      </li>
-      <li>
-        <SocialLink>
-          <SocialImage src={telegram} />
-        </SocialLink>
-      </li>
-      <li>
-        <SocialLink>
-          <SocialImage src={viber} />
-        </SocialLink>
-      </li>
-      <li>
-        <SocialLink>
-          <SocialImage src={facebook} />
-        </SocialLink>
-      </li>
-      <li>
-        <SocialLink>
-          <SocialImage src={linkedin} />
-        </SocialLink>
-      </li>
+      {socials.map((item) => {
+        return <SocialListItem key={item.toString()} src={item} />;
+      })}
     </CocialsList>
   );
 };

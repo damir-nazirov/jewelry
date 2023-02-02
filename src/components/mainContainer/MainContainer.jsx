@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import blesk from "../../images/blesk.svg";
-import { smallDivices } from "../../variables";
+import shine from "../../images/shine.svg";
+import { desktopMinWidth } from "../../variables";
 
 const Container = styled.div`
   width: 626px;
@@ -15,11 +15,11 @@ const Container = styled.div`
   overflow: hidden;
   color: #ffffff;
   position: relative;
-  background-image: url(${blesk});
+  background-image: url(${shine});
   background-repeat: no-repeat;
   background-position: 326.45px 337.45px;
   background-size: 316px 180px;
-  @media (max-width: ${smallDivices}) {
+  @media (max-width: ${desktopMinWidth}) {
     width: 345px;
     height: 810px;
     border: none;
@@ -38,7 +38,7 @@ const Container = styled.div`
     background: #bb559d;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     filter: blur(152.832px);
-    @media (max-width: ${smallDivices}) {
+    @media (max-width: ${desktopMinWidth}) {
       width: 647px;
       height: 647px;
       left: -398px;
@@ -55,7 +55,7 @@ const Container = styled.div`
     top: 299.55px;
     background: #bb559d;
     filter: blur(152.832px);
-    @media (max-width: ${smallDivices}) {
+    @media (max-width: ${desktopMinWidth}) {
       width: 532px;
       height: 532px;
       left: 189px;

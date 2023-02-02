@@ -1,3 +1,3 @@
 
 
-export const smallDivices = '626px'
+export const desktopMinWidth = '626px'

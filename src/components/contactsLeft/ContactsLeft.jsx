@@ -2,7 +2,7 @@ import styled from "styled-components";
 import phone from "../../images/phone.svg";
 import email from "../../images/email.svg";
 import home from "../../images/home.svg";
-import { smallDivices } from "../../variables";
+import { desktopMinWidth } from "../../variables";
 
 const ContactsListWrapper = styled.div`
   display: flex;
@@ -12,7 +12,6 @@ const ContactsListWrapper = styled.div`
 
 const ContactsList = styled.ul`
   width: 100%;
-  /* height: 104px; */
   list-style: none;
   font-style: normal;
   font-weight: 400;
@@ -34,7 +33,10 @@ const ContactsItem = styled.li`
   &:hover:nth-child(2) {
     text-decoration: underline;
   }
-  @media (max-width: ${smallDivices}) {
+  &:hover:nth-child(1) {
+    text-decoration: underline;
+  }
+  @media (max-width: ${desktopMinWidth}) {
     padding-top: 13.5px;
   }
 `;
@@ -48,7 +50,7 @@ const ContactsLink = styled.a`
   line-height: 10px;
   color: #ffffff;
   text-decoration: none;
-  @media (max-width: ${smallDivices}) {
+  @media (max-width: ${desktopMinWidth}) {
     font-size: 11.1899px;
     line-height: 13px;
   }
@@ -69,7 +71,7 @@ const ContactsLeft = () => {
     <ContactsListWrapper>
       <ContactsList>
         <ContactsItem>
-          <ContactsLink url={phone} href="tel:8-800-302-0780">
+          <ContactsLink url={phone} href="tel:+7 (926) 359-22-44" type="">
             +7 (926) 359-22-44
           </ContactsLink>
         </ContactsItem>

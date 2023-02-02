@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import logoRus2Lines from "../../images/logo/logo_2_stroki_rus.svg";
-import { smallDivices } from "../../variables";
+import logoRus2Lines from "../../images/logo/logoRus2Lines.svg";
+import { desktopMinWidth } from "../../variables";
 
 const Container = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ const Container = styled.div`
   color: #ffffff;
   z-index: 100;
   padding: 52px 0;
-  @media (max-width: ${smallDivices}) {
+  @media (max-width: ${desktopMinWidth}) {
     display: none;
   }
 `;
@@ -59,6 +59,15 @@ const ContactsItem = styled.li`
   padding: 12px 0;
 `;
 
+const ContactsLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: underline;
+  }
+  cursor: pointer;
+`;
+
 const RighttSide = () => {
   return (
     <Container>
@@ -68,24 +77,32 @@ const RighttSide = () => {
       <ContactsContainer>
         <ContactsList>
           <ContactsItem>
-            {" "}
             <div>Веб сайт</div>
-            <div>http://www.bronnitsy.com</div>{" "}
+            <div>
+              <ContactsLink href="http://www.bronnitsy.com">
+                http://www.bronnitsy.com
+              </ContactsLink>
+            </div>
           </ContactsItem>
           <ContactsItem>
-            {" "}
             <div>Телефон</div>
-            <div>+7 (926) 359-22-44</div>{" "}
+            <div>
+              <ContactsLink href="tel:+7 (926) 359-22-44">
+                +7 (926) 359-22-44
+              </ContactsLink>
+            </div>
           </ContactsItem>
           <ContactsItem>
-            {" "}
             <div>E-mail</div>
-            <div>zaa495@gmail.com</div>{" "}
+            <div>
+              <ContactsLink href="mailto:zaa495@gmail.com">
+                zaa495@gmail.com
+              </ContactsLink>
+            </div>
           </ContactsItem>
           <ContactsItem>
-            {" "}
             <div>Адрес</div>
-            <div>115093, Партийный переулок 1 к46</div>{" "}
+            <div>115093, Партийный переулок 1 к46</div>
           </ContactsItem>
         </ContactsList>
       </ContactsContainer>

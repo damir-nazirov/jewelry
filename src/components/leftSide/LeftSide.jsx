@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 import ContactsLeft from "../contactsLeft/ContactsLeft";
 import Socials from "../socials/Socials";
-import logoRus1Line from "../../images/logo/logo_1_stroka_rus.svg";
-import { smallDivices } from "../../variables";
+import logoRus1Line from "../../images/logo/logoRus1Line.svg";
+import { desktopMinWidth } from "../../variables";
 
 const Container = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const Container = styled.div`
   color: #ffffff;
   z-index: 100;
   padding: 36px 0 38px 0;
-  @media (max-width: ${smallDivices}) {
+  @media (max-width: ${desktopMinWidth}) {
     height: 590px;
     width: 246px;
     padding-top: 59px;
@@ -26,7 +26,7 @@ const Container = styled.div`
 const LogoLink = styled.a`
   display: none;
   cursor: pointer;
-  @media (max-width: ${smallDivices}) {
+  @media (max-width: ${desktopMinWidth}) {
     display: block;
   }
 `;
@@ -38,7 +38,7 @@ const Photo = styled.div`
   /* background-color: red; */
   border-radius: 50%;
   z-index: 100;
-  @media (max-width: ${smallDivices}) {
+  @media (max-width: ${desktopMinWidth}) {
     width: 148.46px;
     height: 148.67px;
   }
@@ -52,7 +52,7 @@ const FullName = styled.h1`
   align-items: center;
   text-align: center;
   text-transform: uppercase;
-  @media (max-width: ${smallDivices}) {
+  @media (max-width: ${desktopMinWidth}) {
     font-size: 19.5104px;
     line-height: 23px;
   }
@@ -64,7 +64,7 @@ const Position = styled.div`
   font-size: 8.23135px;
   line-height: 10px;
   display: flex;
-  @media (max-width: ${smallDivices}) {
+  @media (max-width: ${desktopMinWidth}) {
     font-size: 11.2px;
     line-height: 13px;
   }
@@ -86,7 +86,7 @@ const SaveContacts = styled.button`
   &:hover {
     box-shadow: -11px -8px 67px 26px rgba(34, 60, 80, 0.18) inset;
   }
-  @media (max-width: ${smallDivices}) {
+  @media (max-width: ${desktopMinWidth}) {
     font-size: 17.12px;
     line-height: 21px;
   }

@@ -1,10 +1,8 @@
-import { createGlobalStyle } from "styled-components";
-import styled from "styled-components";
-
+import styled, { createGlobalStyle } from "styled-components";
 import MainContainer from "./components/mainContainer/MainContainer";
 import LeftSide from "./components/leftSide/LeftSide";
 import RighttSide from "./components/rightSide/RightSide";
-import { smallDivices } from "./variables";
+import { desktopMinWidth } from "./variables";
 
 const GlobalSyles = createGlobalStyle`
   body{
@@ -23,7 +21,7 @@ const Line = styled.div`
   height: 394px;
   background-color: white;
   padding: 0;
-  @media (max-width: ${smallDivices}) {
+  @media (max-width: ${desktopMinWidth}) {
     display: none;
   }
 `;
