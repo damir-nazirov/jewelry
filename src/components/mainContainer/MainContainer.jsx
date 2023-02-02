@@ -20,12 +20,13 @@ const Container = styled.div`
   background-position: 326.45px 337.45px;
   background-size: 316px 180px;
   @media (max-width: ${desktopMinWidth}) {
+    overflow-y: auto;
     width: 345px;
-    height: 810px;
+    height: 1250px;
     border: none;
     border-radius: 0;
     justify-content: center;
-    background-position: 83px 625px;
+    background-position: 83px 900px;
     background-size: 265px 150px;
   }
   &::before {

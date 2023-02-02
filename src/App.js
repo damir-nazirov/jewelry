@@ -12,6 +12,10 @@ const GlobalSyles = createGlobalStyle`
     align-items: center;
     height: 100vh;
     font-family: 'Exo 2', sans-serif;
+    @media (max-width: ${desktopMinWidth}) {
+      align-items: baseline;
+  }
+
   }
 `;
 

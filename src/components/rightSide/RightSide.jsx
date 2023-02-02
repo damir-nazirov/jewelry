@@ -71,7 +71,7 @@ const ContactsLink = styled.a`
 const RighttSide = () => {
   return (
     <Container>
-      <LogoLink>
+      <LogoLink href="http://www.bronnitsy.com">
         <img src={logoRus2Lines} alt="logo" />
       </LogoLink>
       <ContactsContainer>

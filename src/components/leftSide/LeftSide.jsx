@@ -3,13 +3,13 @@ import styled from "styled-components";
 
 import ContactsLeft from "../contactsLeft/ContactsLeft";
 import Socials from "../socials/Socials";
+import AboutCompany from "../aboutCompany/AboutCompany";
 import logoRus1Line from "../../images/logo/logoRus1Line.svg";
 import { desktopMinWidth } from "../../variables";
 
 const Container = styled.div`
   display: flex;
   width: 181px;
-  /* height: 380px; */
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -17,7 +17,7 @@ const Container = styled.div`
   z-index: 100;
   padding: 36px 0 38px 0;
   @media (max-width: ${desktopMinWidth}) {
-    height: 590px;
+    height: 870px;
     width: 246px;
     padding-top: 59px;
   }
@@ -35,7 +35,6 @@ const Photo = styled.div`
   width: 109.2px;
   height: 109.36px;
   background: rgba(255, 255, 255, 0.21);
-  /* background-color: red; */
   border-radius: 50%;
   z-index: 100;
   @media (max-width: ${desktopMinWidth}) {
@@ -95,7 +94,7 @@ const SaveContacts = styled.button`
 const LeftSide = () => {
   return (
     <Container>
-      <LogoLink>
+      <LogoLink href="http://www.bronnitsy.com">
         <img src={logoRus1Line} alt="logo" />
       </LogoLink>
       <Photo />
@@ -104,6 +103,7 @@ const LeftSide = () => {
       <ContactsLeft />
       <Socials />
       <SaveContacts>Сохранить в контакты</SaveContacts>
+      <AboutCompany />
     </Container>
   );
 };

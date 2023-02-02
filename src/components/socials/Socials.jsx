@@ -17,6 +17,7 @@ const CocialsList = styled.ul`
   list-style: none;
   padding: 0;
   position: relative;
+  margin: 0;
 `;
 
 const SocialLink = styled.a`
